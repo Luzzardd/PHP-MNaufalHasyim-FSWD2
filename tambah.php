@@ -7,9 +7,9 @@ if ( isset($_POST["submit"])){
         $email = $_POST["email"];
         $phone = $_POST["phone"];
         $role = $_POST["role"];
-
+        $alamat = $_POST["alamat"];
     //query insert data
-    $query = "INSERT INTO mahasiswa VALUES ('','$gambar','$nama','$email,'$phone','$role')";
+    $query = "INSERT INTO mahasiswa(id,gambar,nama,email,phone,role,alamat) VALUES (null,'$gambar','$nama','$email',  $phone ,'$role','$alamat')";
     
     mysqli_query($conn, $query);
 }
@@ -22,7 +22,7 @@ if ( isset($_POST["submit"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambah Data</title>
+     
 </head>
 <body>
     <h1>Tambah Data</h1>
@@ -48,6 +48,10 @@ if ( isset($_POST["submit"])){
             <li>
                 <label for="gambar">Gambar :</label>
                 <input type="text" name="gambar" id="gambar">
+            </li>
+            <li>
+                <label for="alamat">alamat :</label>
+                <input type="text" name="alamat" id="alamat">
             </li>
             <li>
                 <button type="submit" name="submit">Tambah</button>
