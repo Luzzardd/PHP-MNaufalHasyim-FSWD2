@@ -13,4 +13,15 @@ function  query($query){
     return $rows;
 }
 
+function hapus($id){
+    global $conn;
+    mysqli_query($conn, "DELETE FROM mahasiswa WHERE id = $id");
+
+    return mysqli_affected_rows($conn);
+}
+
+
+
+
+
 ?>

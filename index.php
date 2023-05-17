@@ -32,7 +32,7 @@ $mahasiswa = query("SELECT * FROM mahasiswa");
         <td><?= $i ?></td>
         <td>
             <a href="">Ubah</a> |
-            <a href="">Hapus</a>
+            <a href="hapus.php?id= <?= $row["id"]; ?>" >Hapus</a>
 
 
         </td>
